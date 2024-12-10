@@ -1,0 +1,9 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/home/nhamzz/datn/consumer.py", line 5, in <module>
+    from influx_db import (
+  File "/home/nhamzz/datn/influx_db.py", line 20, in <module>
+    INFLUXDB_TOKEN = os.environ["INFLUXDB_TOKEN"]
+  File "/usr/lib/python3.8/os.py", line 675, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'INFLUXDB_TOKEN'
