@@ -112,12 +112,15 @@ def getWarning():
 @task
 def checkWarning(warnings):
     # first value is trigger, second value is is_greater
+
     comparison_funcs = {
         (True, True): operator.ge,  # trigger is True and is_greater is True (>=)
         (True, False): operator.le,  # trigger is True and is_greater is False (<=)
         (False, True): operator.lt,  # trigger is False and is_greater is True (<)
         (False, False): operator.gt,  # trigger is False and is_greater is False (>)
     }
+
+    
     datas = {}
     df = pd.DataFrame()
 

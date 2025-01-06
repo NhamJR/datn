@@ -5,7 +5,7 @@ from discord import app_commands
 from dotenv import load_dotenv, dotenv_values
 import os
 
-# from influx_db import get_latest_price
+# from influx_db1 import get_latest_price
 from datetime import datetime
 import time
 import asyncio
@@ -13,7 +13,7 @@ from confluent_kafka import Consumer, KafkaError
 import socket
 import concurrent.futures
 
-#os.chdir("discord_bot")
+os.chdir("discord_bot")
 
 print(load_dotenv("../all.env"))
 
@@ -76,6 +76,7 @@ async def reload_ext():
 
 def receive_message(loop):
     print("my_task")
+
     try:
         while True:
             # print("my_task2")

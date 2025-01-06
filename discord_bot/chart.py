@@ -8,7 +8,7 @@ from matplotlib.pyplot import figure
 dayFmt = mdates.DateFormatter("%Y-%m-%d", tz="Asia/Ho_Chi_Minh")
 hourFmt = mdates.DateFormatter("%H:%M", tz="Asia/Ho_Chi_Minh")
 import asyncio
-from influx_db import get_all_time_data, get_single_day_data
+from influx_db1 import get_all_time_data, get_single_day_data
 
 
 def generate_title(ticker, field, indicator: str, type):

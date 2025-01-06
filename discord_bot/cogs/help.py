@@ -28,9 +28,6 @@ class Help(commands.Cog):
             "- /thêm_cảnh_báo: thêm một cảnh báo về cổ phiếu \n"
             "- /xóa_cảnh_báo: xóa đi một cảnh báo đã tạo \n"
             "- /sửa_cảnh_báo: sửa một cảnh báo đã tạo \n"
-            "- /đọc_email: xem email đã thiết lập \n"
-            "- /thiết_lập_email: thêm hoặc chỉnh sửa email để gửi cảnh báo \n"
-            "- /xóa_email: xóa email đã thiết lập \n"
             "- /dự_đoán: Đưa ra các dự đoán về tương lai của cổ phiếu"
         )
         await interaction.response.send_message(message)

@@ -19,7 +19,7 @@ sys.path.insert(0, parentdir)
 import discord
 from discord.ext import commands
 from discord import app_commands
-from influx_db import (
+from influx_db1 import (
     get_latest_data,
     get_latest_daily_data,
     get_all_time_data,

@@ -18,7 +18,7 @@ import inspect
 # parentdir = os.path.dirname(currentdir)
 # sys.path.insert(0, parentdir)
 
-from influx_db  import get_analaytic_data
+from influx_db1  import get_analaytic_data
 
 #os.chdir("discord_bot")
 print(load_dotenv("../all.env"))

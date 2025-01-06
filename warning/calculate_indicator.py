@@ -190,29 +190,43 @@ def get_all_data_point(df: pd.DataFrame, field: str | None, indicator: str | Non
 
 
 def caculate_analaytic_data(df: pd.DataFrame):
+    print("done///")
+
+    print(ta.sma(df["close"]))
+    print(ta.rsi(df["close"]))
+    
+    print("////////////////////////////////////////////")
     df = df[["close", "high", "low", "volume"]]
+   
+    
+    
+
     df = (
         pd.concat(
             [
                 df,
                 ta.sma(df["close"]),
                 ta.macd(df["close"]).iloc[:, :1],
-                ta.rsi(df["close"]),
-                ta.stoch(df["high"], df["low"], df["close"]).iloc[:, :1],
+                ta.rsi(df["close"]),          
+                ta.stoch(df["high"], df["low"], df["close"]).iloc[:, :1],       
                 ta.obv(df["close"], df["volume"]),
                 ta.bbands(df["close"]).iloc[:, :3],
-                ta.atr(df["high"], df["low"], df["close"]),
+                ta.atr(df["high"], df["low"], df["close"]),   
+
             ],
             axis=1,
         )
         .dropna()
         .round(2)
     )
+    
+
     # df.columns = [re.sub(r"[_\d.]", "", name) for name in df.columns]
     # df.index = df.index.tz_convert("Asia/Ho_Chi_minh").strftime("%Y-%m-%d")
     # df.reset_index(inplace=True)
     # # df.to_csv("./test.csv")
     # df.to_json(orient="records")
+    print(df)
     return df
 
 

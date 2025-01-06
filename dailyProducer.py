@@ -82,7 +82,7 @@ def retrieve_real_time_data(stock_symbols):
         try:
             real_time_data = stock_historical_data(
                 symbol=stock_symbol,
-                start_date="2024-10-01",
+                start_date=today,
                 end_date=today,
                 resolution="1D",
                 type="stock",
